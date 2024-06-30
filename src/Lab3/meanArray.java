@@ -3,8 +3,16 @@ package Lab3;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/*
+ * Class for the short program that takes in inputs from the user and returns some information about the input. 
+ */
 public class meanArray {
     
+    /*
+     * Asks the user for input and then prints information about it. 
+     * The input should be in the form och integers but the program can handle wrong input.
+     * The information printed is the mean and the number of unique integers.
+     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
@@ -27,6 +35,14 @@ public class meanArray {
 
     }
 
+    /*
+     * Handels the input from the user.
+     * 
+     * 
+     * @param str   The question for the user.
+     * @param input The scanner object.
+     * @return      An array of the numbers inputted.
+     */
     public static int input(String str, Scanner input){
         
         boolean correctInput = false;
@@ -47,7 +63,13 @@ public class meanArray {
 
         return value;
     }
-    
+
+    /*
+     * Calculates the mean of the numbers given
+     * 
+     * @param numbers   Array of numbers to calculate mean from.
+     * @return          The mean.
+     */
     public static int mean(int[] numbers){
         
         int sum = 0;
@@ -57,6 +79,12 @@ public class meanArray {
         return sum/numbers.length;
     }
 
+    /*
+     * Counts the total number of unique numbers.
+     * 
+     * @param numbers   Array of numbers to calculate from.
+     * @return          The number of unique numbers.
+     */
     public static int times(int[] numbers){
         int times = 0; 
     
