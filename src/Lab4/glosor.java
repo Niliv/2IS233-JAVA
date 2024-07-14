@@ -2,15 +2,23 @@ package Lab4;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import java.util.Scanner;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+/* 
+ * Main class for the spell checking program.
+ */
 
 class glosor{
-    
 
+ 
     public static void main(String[] args) {
+        program();
+    }
+    
+    /*
+     * The main body of the program. It executes the preperations and the main loop of the program.
+     */
+    public static void program() {
 
         int nr_correct = 0;
         Scanner scanner =  new Scanner(System.in);
@@ -29,28 +37,44 @@ class glosor{
             String line = reader.read_word(numbers.get(i));
             String[] words = line.split(",");
             System.out.println(words[0] + " :");
-            String answer = scanner.nextLine();
-            System.out.println(answer);
+            String guess = scanner.nextLine();
+            
 
-            if(answer.equals("Q")){
+            if(guess.equals("Q")){
                 exit(nr_correct, i);
             }
 
-            
+            int result = spell_checker.check_spelling(guess, words[1]);
+
+            if(result == 0){
+                System.out.printf("Fel! %d rätt av %d ord.\n", nr_correct, i);
+            }
+
+            else if(result == 1){
+                nr_correct++;
+                System.out.printf("Korrekt! %d rätt av %d ord.\n", nr_correct, i);
+            }
+
+            else if(result == 2){
+                System.out.printf("Nästan rätt. Korrekt svar är %s.\n", words[1]);
+            }
+        
         }
 
         exit(nr_correct, 10);
 
     }
 
-    static void exit(int corect, int total){
-        System.out.println("Du svarade på totalt " + String.valueOf(total) + " glosor och hade " +
-                            String.valueOf(corect) + " rätt. Välkommen åter!");
+
+    /*
+     * Method to exit the program.
+     * 
+     * @param correct   Number of correct guesses.
+     * @param total     Number of questions asked.
+     */
+    static void exit(int correct, int total){
+        System.out.printf("Du svarade på totalt %d glosor och hade %d rätt. Välkommen åter!", total, correct);
         
         System.exit((0));
-    }
-
-    static void check_spelling(String guess, String correct){
-        
     }
 }

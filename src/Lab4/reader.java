@@ -6,7 +6,13 @@ import java.io.IOException;
 
 public class reader{
 
-    // Read a 
+    /*
+     * Reads the glossary file for the specified line. 
+     * The line should contain two words, the first in the original language and the second in the training language.
+     * 
+     * @param   line_nr   The line from which the words should be read.
+     * @return            Returns the given line of words as a String.  
+     */
     public static String read_word(int line_nr){
         
         String file_name = "glosor.txt";

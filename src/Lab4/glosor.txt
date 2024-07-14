@@ -7,7 +7,7 @@ fot,foot
 axel,shoulder
 armbåge,elbow
 rygg,back
-rumpa,bottom
+katt,cat
 rånade,robbed
 bodde,lived
 fattig,poor
@@ -15,7 +15,7 @@ hälften,half
 fru,wife
 pil,arrow
 båge,bow
-döda,kill
+bil,car
 felaktig,faulty
 känsla,feeling
 uppstå,arise
