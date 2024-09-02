@@ -1,4 +1,4 @@
-package Lab5;
+package Lab5.Logic;
 
 import java.io.*;
 import java.util.*;
@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class DataBaseLogic {
     private List<Movie> movies;
-    private String FILE_NAME = "Database.csv";
+    private String FILE_NAME = "./Logic/Database.csv";
 
 
     /**
@@ -80,9 +80,9 @@ public class DataBaseLogic {
     private void loadMovies(){
 
         String line;
-
+        
+        
         try(BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))){
-            br.readLine();
             while((line = br.readLine()) != null){
                 String[] parts = line.split(",");
             

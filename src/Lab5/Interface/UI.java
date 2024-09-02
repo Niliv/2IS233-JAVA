@@ -1,6 +1,9 @@
-package Lab5;
+package Lab5.Interface;
 
 import java.util.*;
+
+import Lab5.Logic.DataBaseLogic;
+import Lab5.Logic.Movie;
 
 public class UI {
 

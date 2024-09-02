@@ -1,5 +1,5 @@
 
-package Lab5;
+package Lab5.Logic;
 
 /**
  * Class for movie objects.

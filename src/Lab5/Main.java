@@ -1,5 +1,7 @@
 package Lab5;
 
+import Lab5.Interface.UI;
+
 public class Main {
 
     /**
